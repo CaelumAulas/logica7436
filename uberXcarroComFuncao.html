@@ -1,0 +1,32 @@
+<h2>Uber x Carro</h2>
+<script>
+var mensagemDoPrompt;
+function pegaNumeroDecimalDaTela() {
+    return parseFloat(prompt(mensagemDoPrompt).replace(",",".").replace("o","0"));
+}
+mensagemDoPrompt = "Digite a distância percorrida";
+var distancia = pegaNumeroDecimalDaTela();
+var numeroQuebrado;
+function formataNumeroQuebrado() {
+    return numeroQuebrado.toFixed(2).replace(".",",");
+}
+numeroQuebrado = distancia;
+document.write("Distância: "+formataNumeroQuebrado()+"km<br>");
+document.write("<h3>Uber:</h3>");
+mensagemDoPrompt = "Digite o preço do Uber";
+var precoUber = pegaNumeroDecimalDaTela();
+numeroQuebrado = precoUber;
+document.write("Preço total: R$ "+formataNumeroQuebrado()+"<br>");
+document.write("<h3>Carro:</h3>");
+mensagemDoPrompt = "Digite o preço gasto com gasolina";
+var gasolina=pegaNumeroDecimalDaTela();
+numeroQuebrado = gasolina;
+document.write("Preço gasolina: R$ "+formataNumeroQuebrado()+"<br>");
+mensagemDoPrompt = "Digite o valor do estacionamento";
+var estacionamento=pegaNumeroDecimalDaTela();
+numeroQuebrado = estacionamento;
+document.write("Preço estacionamento: R$ "+formataNumeroQuebrado()+"<br>");
+var totalCarro=gasolina+estacionamento;
+numeroQuebrado = totalCarro;
+document.write("Preço total: R$ "+formataNumeroQuebrado()+"<br>");
+</script>

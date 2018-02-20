@@ -1,0 +1,8 @@
+<meta charset="utf-8">
+<script src="funcoes.js"></script>
+<script>
+    var peso = pegaNumeroDecimalDaTela("Digite o seu peso");
+    var altura = pegaNumeroDecimalDaTela("Digite a sua altura");
+    var imc = peso/(altura*altura);
+    document.write("Seu IMC é " + formataNumeroQuebrado(imc));
+</script>

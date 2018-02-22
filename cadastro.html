@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script src="funcoes.js"></script>
+<script>
+    var nome = prompt("Digite seu nome");
+    var peso = pegaNumeroDecimalDaTela("Digite o seu peso");
+    var altura = pegaNumeroDecimalDaTela("Digite a sua altura");
+    var imc = peso/(altura*altura);
+    //var idade = parseInt(prompt("Digite sua idade"));
+
+    //var diaNasc = prompt("Digite o seu dia de nascimento");
+    //var mesNasc = prompt("Digite o seu mês de nascimento");
+    //var anoNasc = prompt("Digite o seu ano de nascimento");
+    var dataNasc = prompt("Digite sua data de nascimento");
+    var dataSeparada = dataNasc.split("/");
+    var diaNasc = parseInt(dataSeparada[0]);
+    var mesNasc = parseInt(dataSeparada[1]);
+    var anoNasc = parseInt(dataSeparada[2]);
+    
+    var diaAtual = 21;
+    var mesAtual = 2;
+    var anoAtual = 2018;
+    var idade;
+    if (mesNasc>mesAtual) {
+        idade = anoAtual-anoNasc-1;
+    }
+    if (mesNasc<mesAtual) {
+        idade = anoAtual-anoNasc;
+    }
+    if (mesNasc==mesAtual) {
+        if (diaNasc>diaAtual) {
+            idade = anoAtual-anoNasc-1;
+        }
+        if (diaNasc<diaAtual) {
+            idade = anoAtual-anoNasc;
+        }
+        if (diaNasc==diaAtual) {
+            alert("PARABÉNS! =) ");
+            idade = anoAtual-anoNasc;
+        }   
+    }
+    document.write("Nome: "+nome+".<br>");
+    document.write("Peso: "+formataNumeroQuebrado(peso)+"kg.<br>");
+    document.write("Altura: "+formataNumeroQuebrado(altura)+"m.<br>");
+    document.write("IMC: "+formataNumeroQuebrado(imc)+".<br>");
+    document.write("Idade: "+idade+" anos.<br>");
+    
+    
+</script>

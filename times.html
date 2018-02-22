@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<script src="funcoes.js"></script>
+<script>
+var vitoriasTime1=pegaNumeroInteiroDaTela("Quantas vitórias tem o time 1?");
+var empatesTime1=pegaNumeroInteiroDaTela("Quantos empates tem o time 1?");
+var vitoriasTime2=pegaNumeroInteiroDaTela("Quantas vitórias tem o time 2?");
+var empatesTime2=pegaNumeroInteiroDaTela("Quantos empates tem o time 2?");
+
+var pontosTime1=vitoriasTime1*3+empatesTime1*1;
+var pontosTime2=vitoriasTime2*3+empatesTime2*1;
+
+document.write("Time1: "+pontosTime1+" pontos<br>");
+document.write("Time2: "+pontosTime2+" pontos<br><br>");
+if (pontosTime1>pontosTime2) {
+    document.write("Time1 está ganhando!<br>");
+}
+if (pontosTime1<pontosTime2) {
+    document.write("Time2 está ganhando!<br>");
+}
+if (pontosTime1 == pontosTime2) {
+    document.write("Estão empatados!<br>");
+}
+</script>
